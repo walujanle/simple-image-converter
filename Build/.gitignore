@@ -1,0 +1,15 @@
+# Ignore all build outputs
+Output/Unsigned/*
+Output/Signed/*
+
+# Keep the directory structure
+!Output/.gitkeep.md
+
+# Ignore temporary files
+Temp/
+*.pfx
+*.cer
+*.p12
+
+# Ignore logs
+*.log

@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <RootNamespace>simple_image_converter</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    
+    <!-- Runtime Identifiers for publish -->
+    <RuntimeIdentifiers>win-x64;win-x86;win-arm64</RuntimeIdentifiers>
+    
+    <!-- Application Info -->
+    <AssemblyTitle>Simple Image Converter</AssemblyTitle>
+    <Product>Simple Image Converter</Product>
+    <Description>A simple and secure image converter application with batch processing capabilities</Description>
+    <Copyright>Copyright © 2025</Copyright>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <Version>1.0.0</Version>
+    
+    <!-- These will be set during build via MSBuild properties -->
+    <Company Condition="'$(PublisherName)' != ''">$(PublisherName)</Company>
+    <Authors Condition="'$(PublisherName)' != ''">$(PublisherName)</Authors>
+    
+    <!-- Default values if PublisherName not provided -->
+    <Company Condition="'$(PublisherName)' == ''">Image Converter Developer</Company>
+    <Authors Condition="'$(PublisherName)' == ''">Image Converter Developer</Authors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Magick.NET-Q8-AnyCPU" Version="14.9.1" />
+  </ItemGroup>
+
+</Project>
